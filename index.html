@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="store">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+  <title></title>
+
+</head>
+
+<body ng-controller="StoreController as store">
+
+  <div class="container">
+
+    <div class="row">
+      <h1>This is what we sell</h1>
+    </div>
+
+    <div class="row products">
+
+      <div class="col-lg-3 col-md-4 col-xs-6" ng-repeat="product in store.products" ng-hide="product.soldOut">
+        <div class="thumbnail">
+          <div class="caption">
+            <h2>{{product.name}}</h1>
+            <h3>${{product.price}}</h2>
+            <p>{{product.description}}</p>
+            <button type="button" name="button" class="btn btn-primary" ng-show="product.canPurchase">Add to cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+</body>
+
+</html>

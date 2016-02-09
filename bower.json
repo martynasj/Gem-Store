@@ -1,0 +1,22 @@
+{
+  "name": "1st app",
+  "authors": [
+    "Martynas Jankauskas <jankauskas@icloud.com>"
+  ],
+  "description": "1st app to test angular following codeschool tutorial",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6"
+  }
+}
