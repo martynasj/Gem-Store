@@ -1,8 +1,9 @@
 # Gem Store
 
-## What is it
-My first AngularJS app following tutorial on [Code School](http://codeschool.com)
-This is a work in progress to compliment my AngularJS classes at KEA school in Copenhagen.
+My first AngularJS app following tutorial on [Code School](http://codeschool.com). This is a work in progress to compliment my AngularJS classes at KEA school in Copenhagen.
+
+## What is it?
+Displays a list of Gem objects for sale.
 
 ## Objectives
 * Become familiar with Version Control and [GitHub](http://github.com) workflow

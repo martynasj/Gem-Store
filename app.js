@@ -29,7 +29,13 @@ var gems = [
     price: 129.00,
     description: "Red color rare gem",
     canPurchase: true,
-    soldOut: false
+    soldOut: false,
+    images: [
+      {
+        full: "assets/img/ruby.jpg",
+        thumb: ""
+      }
+    ]
   },
   {
     name: "Topaz",

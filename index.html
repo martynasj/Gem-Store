@@ -23,12 +23,43 @@
 
     <div class="row products">
 
-      <div class="col-lg-3 col-md-4 col-xs-6" ng-repeat="product in store.products" ng-hide="product.soldOut">
+      <div class="col-lg-4 col-md-6 col-xs-12" ng-repeat="product in store.products" ng-hide="product.soldOut">
+
         <div class="thumbnail">
+          <img ng-src="{{store.products[2].images[0].full}}" alt="" />
           <div class="caption">
             <h2>{{product.name}}</h1>
-            <h3>${{product.price}}</h2>
-            <p>{{product.description}}</p>
+            <h3>{{product.price | currency}}</h2>
+
+              <section ng-init="tab = 1">
+                <ul class="nav nav-pills">
+                  <!-- adds a class .active if expression evaluates to true -->
+                  <li ng-class="{active: tab === 1}">
+                    <a href="#" ng-click="tab = 1">Description</a>
+                  </li>
+                  <li ng-class="{active: tab === 2}"><a href="#" ng-click="tab = 2">Specifications</a></li>
+                  <li ng-class="{active: tab === 3}"><a href="#" ng-click="tab = 3">Reviews</a></li>
+                </ul>
+                <div class="panel" ng-show="tab === 1">
+                  <h4>Description</h4>
+                  <p>
+                    {{product.description}}
+                  </p>
+                </div>
+                <div class="panel" ng-show="tab === 2">
+                  <h4>Specifications</h4>
+                  <p>
+                    {{product.description}}
+                  </p>
+                </div>
+                <div class="panel" ng-show="tab === 3">
+                  <h4>Reviews</h4>
+                  <p>
+                    {{product.description}}
+                  </p>
+                </div>
+              </section>
+
             <button type="button" name="button" class="btn btn-primary" ng-show="product.canPurchase">Add to cart</button>
           </div>
         </div>
